@@ -1,0 +1,474 @@
+@import config
+@import "blocks/**/*"
+
+.nav-tabs .nav-link
+    box-sizing: border-box
+    border-radius: 0
+    border: none
+    border-bottom: 2px solid transparent
+    display: flex
+    justify-content: center
+    &.active, &.focus
+        border-bottom: 2px solid $accent
+        &:hover
+            border-bottom: 2px solid $accent
+    &:hover
+        border-bottom: 2px solid transparent
+
+.header
+    .container-fluid
+        padding: 0 20px
+        height: 50px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+
+.header__text
+    font-size: 16px
+    color: $darkcolor
+    font-weight: 500
+
+.header__button
+    svg
+        fill: #999
+    &:hover
+        svg
+            fill: #000
+
+main 
+    height: calc(100% - 108px)
+    display: flex
+    flex-direction: column
+    margin-top: 8px
+    .container-fluid
+        height: calc(100% - 39px)
+        padding: 0 20px
+    .row
+        height: 100%
+        margin: 0 -20px
+
+.nav-link
+    padding: 8px 29px
+    color: $textcolor
+    &:hover
+        color: $textcolor
+    &.active
+        .nav-link__title
+            color: $accent
+
+.nav-tabs
+    padding-left: 20px
+    .nav-link
+        .nav-link__icon
+            height: 18px
+            fill: $textcolor
+            margin-right: 10px
+            transition: all 0.3s ease
+            svg
+                fill: $textcolor
+        &.active
+            .nav-link__icon, svg
+                fill: $accent
+
+.nav-link__title
+    font-size: 13px
+    text-transform: uppercase
+    font-weight: 500
+
+.navbar
+    padding: 0
+    .nav-item
+        margin-left: 30px
+
+.navbar-nav
+    align-items: center
+
+.navbar__content
+    margin-top: 0
+    .nav-link
+        svg, path
+            fill: #999
+        &:hover
+            color: #000
+            svg, path
+                fill: #000
+    
+.nav-item__user
+    width: 33px
+    height: 33px
+    padding: 0
+    border-radius: 50%
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.tab-wrapper
+    height: 100%
+    border-right: 1px solid #dee2e6
+    overflow-x: hidden
+    overflow-y: auto
+    padding-left: 20px
+    padding-right: 20px
+
+.tab-content
+    padding-top: 18px
+
+.tab-pane__title
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: 500
+    color: $lightcolor
+
+.folders
+    padding-left: 0
+    margin-top: 26px
+    user-select: none
+
+.folders, .folders ul
+    list-style-type: none
+
+.folder__wrapper
+    margin-bottom: 15px
+    font-size: 13px
+    color: rgba(0, 0, 0, 0.87)
+    cursor: pointer
+    position: relative
+    .folder
+        position: relative
+        z-index: 1
+        &.active
+            color: $accent
+            & > .folder__icon i
+                color: $accent
+        span
+            pointer-events: none
+        i
+            display: inline-block
+            position: relative
+            font-family: "fontawesome"
+            font-style: normal
+            color: rgba(0, 0, 0, 0.3)
+            font-size: 17px
+            line-height: 1
+        &::after
+            opacity: 0
+            transition: opacity 0.3s ease
+        &:hover
+            &::after
+                display: block
+                content: ""
+                position: absolute
+                top: -5px
+                bottom: -5px
+                left: -90px
+                right: -40px
+                background-color: #f5f5f5
+                z-index: -1
+                opacity: 1
+
+.folders ul
+    margin-top: 15px
+    padding-left: 21px
+
+.folder__icon
+    display: inline-block
+    width: 16px
+    height: 16px
+    margin-right: 10px
+    position: relative
+
+.has-subfolders
+    position: relative
+    & > .folder
+        .folder__icon
+            &::before
+                display: block
+                font-family: "fontawesome"
+                content: "\f067"
+                position: absolute
+                top: 50%
+                left: 50%
+                margin-top: -0.8px
+                transform: translateX(-50%) translateY(-36%)
+                color: #fff
+                font-size: 8px
+                z-index: 1
+    &.show > .folder
+        .folder__icon
+            &::before
+                display: block
+                font-family: "fontawesome"
+                content: "\f068"
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translateX(-50%) translateY(-36%)
+                color: #fff
+                font-size: 8px
+                z-index: 1
+    &.show
+        &::before
+            display: block
+            content: ""
+            width: 1px
+            position: absolute
+            top: 15px
+            left: 7px
+            bottom: 7px
+            border-left: 1px dashed rgba(0, 0, 0, 0.2)
+            
+
+.breadcrumb
+    margin-bottom: 0
+    background-color: transparent
+    font-size: 15px
+    a
+        color: $textcolor
+        &:hover, &:active, &:focus
+            text-decoration: none
+    .breadcrumb-item:last-child
+        a
+            color: $darkcolor !important
+
+.breadcrumb-item+.breadcrumb-item
+    padding-left: 0
+
+.breadcrumb-item+.breadcrumb-item::before
+    content: "\203A"
+    padding-left: 12px
+    padding-right: 12px
+
+.content-wrapper
+    display: flex
+    flex-direction: column
+    height: 100%
+
+.content
+    height: 100%
+    position: relative
+    width: calc(100% - 16px)
+    margin-left: 16px
+    margin-top: 20px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-start
+    overflow-y: auto
+
+.content-top__options
+    svg
+        fill: #777
+
+.empty
+    width: 200px
+    text-align: center
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+.empty__image
+    height: 60px
+
+.empty__title
+    margin-top: 15px
+    font-size: 18px
+    color: $accent
+
+.empty__text
+    font-size: 14px
+
+.card
+    width: 158px
+    height: 180px
+    float: left
+    padding: 8px
+    margin-right: 8px
+    margin-bottom: 8px
+    box-sizing: border-box
+    border: none
+    border-radius: 0
+    background-color: #fff
+    border: 2px solid transparent
+    transition: all 0.3s ease
+    cursor: pointer
+    &:hover
+        background-color: #f5f5f5
+    &.active
+        background-color: #fff
+        border: 2px solid $accent
+    &.card_marked
+        position: relative
+        &::before
+            display: block
+            position: absolute
+            content: "FREE"
+            color: #fff
+            background: #27ae60
+            border-radius: 3px
+            font-size: 10px
+            padding: 3px 9px
+            top: 5px
+            right: 5px
+
+.card__body
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
+.card__img
+    height: 120px
+    width: 100%
+    background-image: url("../../images/dist/oval50.svg")
+    background-position: center center
+    background-repeat: no-repeat
+    overflow: hidden
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.card__title
+    font-size: 14px
+    font-weight: normal
+    color: rgba(0, 0, 0, 0.87)
+    margin-top: 8px
+    margin-bottom: 0
+
+.card__text
+    font-size: 12px
+    margin-bottom: 0
+
+.content-top
+    display: none
+
+.tab-top
+    display: none
+
+
+.navbar.navbar-footer
+    background-color: #fff
+    padding-top: 9px
+    padding-bottom: 9px
+    .nav-item
+        margin-left: 25px
+        margin-right: 25px
+        line-height: normal
+        font-size: 13px
+        text-transform: uppercase
+        font-weight: 500
+        .nav-link
+            color: #ccc
+            pointer-events: none
+            cursor: default
+            &.active
+                color: $textcolor
+                pointer-events: auto
+                cursor: pointer
+                &:hover
+                    color: $accent
+
+@media (max-width: 600px)
+    body
+        display: flex
+        flex-direction: column
+        padding: 0
+        overflow-y: auto
+
+    .navbar__content
+        display: none
+
+    .nav-tabs .nav-item
+        width: 50%
+
+    .footer .navbar-nav
+        flex-direction: row
+
+    .tab-wrapper
+        position: absolute
+        top: 0
+        left: -100vw
+        height: 100vh
+        background-color: #fff
+        border-right: none
+        z-index: 9999
+        transition: left 0.5s ease
+        &.opened
+            left: 0
+
+    .content-top
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-top: 11px
+
+    .content-top__button
+        width: 20px
+        height: 20px
+        margin-right: 15px
+        outline: none !important
+        box-shadow: none !important
+        svg
+            display: block
+
+    .content-top__title
+        margin-right: auto
+        color: $darkcolor
+        font-weight: 500
+        font-size: 15px
+
+    .content
+        width: 100%
+        min-height: auto
+        margin-left: 0
+        margin-top: 16px
+
+    .card
+        width: calc(50% - 4px)
+        margin-right: 8px
+        margin-bottom: 8px
+        &:nth-child(2n)
+            margin-right: 0
+
+    .tab-content
+        padding-top: 0
+
+    .tab-top__title
+        color: $darkcolor
+        font-weight: 500
+        font-size: 16px
+
+    .tab-top
+        display: flex
+        width: 100%
+        height: 50px
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+        margin-bottom: 16px
+        border-bottom: 1px solid #dee2e6
+
+    .tab-top__button
+        margin-right: 15px
+
+    .nav-tabs
+        padding-left: 0
+
+    main
+        min-height: 400px
+        display: flex
+        flex-direction: column
+        padding-bottom: 60px
+        flex-grow: 3
+        .container-fluid
+            flex-grow: 3
+        .content
+            height: 100%

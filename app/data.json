@@ -1,0 +1,283 @@
+[
+    {
+        "category": "Animals",
+        "children": [
+            {
+                "category": "Cats",
+                "children": [
+                    {
+                        "category": "Siamskaya",
+                        "children": [
+                            {
+                                "title": "Siamskaya",
+                                "text": "Text",
+                                "image": "images/dist/siam1.jpg",
+                                "marked": 1
+                            },
+                            {
+                                "title": "Siamskaya",
+                                "text": "Text",
+                                "image": "images/dist/siam2.jpg",
+                                "marked": 1
+                            },
+                            {
+                                "title": "Siamskaya",
+                                "text": "Text",
+                                "image": "images/dist/siam3.jpg"
+                            },
+                            {
+                                "title": "Siamskaya",
+                                "text": "Text",
+                                "image": "images/dist/siam4.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Bengalskaya",
+                        "children": [
+                            {
+                                "title": "Bengalskaya",
+                                "text": "Text",
+                                "image": "images/dist/ben1.jpg",
+                                "marked": 1
+                            },
+                            {
+                                "title": "Bengalskaya",
+                                "text": "Text",
+                                "image": "images/dist/ben2.jpg",
+                                "marked": 1
+                            },
+                            {
+                                "title": "Bengalskaya",
+                                "text": "Text",
+                                "image": "images/dist/ben3.jpg",
+                                "marked": 1
+                            },
+                            {
+                                "title": "Bengalskaya",
+                                "text": "Text",
+                                "image": "images/dist/ben4.jpg"
+                            },
+                            {
+                                "title": "Bengalskaya",
+                                "text": "Text",
+                                "image": "images/dist/ben5.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Abissinskaya",
+                        "children": [
+                            {
+                                "title": "Abissinskaya",
+                                "text": "Text",
+                                "image": "images/dist/ab1.jpg",
+                                "marked": 1
+                            },
+                            {
+                                "title": "Abissinskaya",
+                                "text": "Text",
+                                "image": "images/dist/ab2.jpg",
+                                "marked": 1
+                            },
+                            {
+                                "title": "Abissinskaya",
+                                "text": "Text",
+                                "image": "images/dist/ab3.jpg"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "Dogs",
+                "children": [
+                    {
+                        "category": "Labrador",
+                        "children": [
+                            {
+                                "title": "Labrador",
+                                "text": "Text",
+                                "image": "images/dist/lab1.jpg",
+                                "marked": 1
+                            },
+                            {
+                                "title": "Labrador",
+                                "text": "Text",
+                                "image": "images/dist/lab2.jpg"
+                            },
+                            {
+                                "title": "Labrador",
+                                "text": "Text",
+                                "image": "images/dist/lab3.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Doberman",
+                        "children": [
+                            {
+                                "title": "Doberman",
+                                "text": "Text",
+                                "image": "images/dist/dob1.jpg",
+                                "marked": 1
+                            },
+                            {
+                                "title": "Doberman",
+                                "text": "Text",
+                                "image": "images/dist/dob2.jpg"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Flowers",
+        "children": [
+            {
+                "category": "Tulips",
+                "children": [
+                    {
+                        "title": "Tulips",
+                        "text": "Text",
+                        "image": "images/dist/tul1.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Tulips",
+                        "text": "Text",
+                        "image": "images/dist/tul2.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Tulips",
+                        "text": "Text",
+                        "image": "images/dist/tul3.jpg"
+                    }
+                ]
+            },
+            {
+                "category": "Hydrangea",
+                "children": [
+                    {
+                        "title": "Hydrangea",
+                        "text": "Text",
+                        "image": "images/dist/gor1.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Hydrangea",
+                        "text": "Text",
+                        "image": "images/dist/gor2.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Hydrangea",
+                        "text": "Text",
+                        "image": "images/dist/gor3.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Fruits",
+        "children": [
+            {
+                "category": "Apples",
+                "children": [
+                    {
+                        "title": "Apples",
+                        "text": "Text",
+                        "image": "images/dist/ap1.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Apples",
+                        "text": "Text",
+                        "image": "images/dist/ap2.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Apples",
+                        "text": "Text",
+                        "image": "images/dist/ap3.jpg"
+                    }
+                ]
+            },
+            {
+                "category": "Lime",
+                "children": [
+                    {
+                        "title": "Lime",
+                        "text": "Text",
+                        "image": "images/dist/li1.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Lime",
+                        "text": "Text",
+                        "image": "images/dist/li2.jpg",
+                        "marked": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Interior",
+        "children": [
+            {
+                "category": "Living",
+                "children": [
+                    {
+                        "title": "Living",
+                        "text": "Text",
+                        "image": "images/dist/liv1.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Living",
+                        "text": "Text",
+                        "image": "images/dist/liv2.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Living",
+                        "text": "Text",
+                        "image": "images/dist/liv3.jpg"
+                    }
+                ]
+            },
+            {
+                "category": "Kitchen",
+                "children": [
+                    {
+                        "title": "Kitchen",
+                        "text": "Text",
+                        "image": "images/dist/ki1.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Kitchen",
+                        "text": "Text",
+                        "image": "images/dist/ki2.jpg",
+                        "marked": 1
+                    },
+                    {
+                        "title": "Kitchen",
+                        "text": "Text",
+                        "image": "images/dist/ki3.jpg"
+                    },
+                    {
+                        "title": "Kitchen",
+                        "text": "Text",
+                        "image": "images/dist/ki4.jpg"
+                    }
+                ]
+            }
+        ]
+    }
+]
