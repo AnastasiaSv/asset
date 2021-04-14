@@ -1,13 +1,13 @@
 import * as data from "../data.json";
 
 const foldersContainer = document.querySelector(".folders"),
-	  cardsWrapper = document.querySelector(".cards"),
-	  emptyBlock = document.querySelector(".empty"),
-	  insertButtons = document.querySelectorAll(".navbar-footer .nav-link"),
-	  breadcrumbsWrapper = document.querySelector(".breadcrumb"),
-	  showCategoryButton = document.querySelector(".content-top__button"),
-	  backButton = document.querySelector(".tab-top__button"),
-	  categoryContainer = document.querySelector(".tab-wrapper");
+	cardsWrapper = document.querySelector(".cards"),
+	emptyBlock = document.querySelector(".empty"),
+	insertButtons = document.querySelectorAll(".navbar-footer .nav-link"),
+	breadcrumbsWrapper = document.querySelector(".breadcrumb"),
+	showCategoryButton = document.querySelector(".content-top__button"),
+	backButton = document.querySelector(".tab-top__button"),
+	categoryContainer = document.querySelector(".tab-wrapper");
 
 const info = data.default;
 
@@ -16,9 +16,9 @@ createTree(info, foldersContainer);
 
 // Folder "All" creation
 function createCommonFolder(info) {
-	const nestedCardElements = recursiveSearch(info, 'children'),
-		  elementTitle = `All (${nestedCardElements.length})`,
-		  element = folderCreation('folder__wrapper', elementTitle);
+	const nestedCardElements = recursiveSearch(info, 'children');
+	const elementTitle = `All (${nestedCardElements.length})`;
+	const element = folderCreation('folder__wrapper', elementTitle);
 
 	foldersContainer.append(element);
 	addListenerToFolder(element.querySelector(".folder"), nestedCardElements);
@@ -35,8 +35,8 @@ function createTree(info, container) {
 		if (!item.category) return;
 
 		const nestedCardElements = recursiveSearch(item, 'children'),
-			  elementTitle = `${item.category} (${nestedCardElements.length})`,
-			  element = folderCreation('folder__wrapper', elementTitle);
+			elementTitle = `${item.category} (${nestedCardElements.length})`,
+			element = folderCreation('folder__wrapper', elementTitle);
 
 		if (item.children[0].category != undefined) element.classList.add('has-subfolders', 'hide');
 
@@ -167,7 +167,7 @@ function createBreadcrumbs(array) {
 
 function createBreadcrumbsArray(element, texts) {
 	const parent = element.closest("ul"),
-		  text = element.querySelector(".folder__text").textContent;
+		text = element.querySelector(".folder__text").textContent;
 
 	texts.push(text.replace(/ *\([^)]*\) */g, ""));
 	
